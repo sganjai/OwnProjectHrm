@@ -1,0 +1,33 @@
+# Maven build output
+target/
+
+# TestNG default reports
+test-output/
+
+# Screenshots
+Screenshots/
+
+# Logs - ignore folder contents but allow specific
+logs/**
+!logs/2026-05-10_18-30-20_validateLogin_17.log
+
+# Custom Reports - ignore folder contents but allow specific
+reports/**
+!reports/2026-05-10_18-30-47/
+!reports/2026-05-10_18-30-47/**
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+
+# IDE - IntelliJ
+.idea/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Kiro AI
+.ai/

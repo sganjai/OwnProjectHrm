@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> comment 
+	this in eclipse -->
+<suite name="MySuite" parallel="tests" thread-count="3"> <!--parallel="tests" thread-count="3" -->
+	<parameter name="zoomFactor" value="1" />
+	<listeners>
+		<listener
+			class-name="com.myownProject.test.listener.TestListener" />
+	</listeners>
+	<test name="LoginTest">
+		<classes>
+			<class name="com.myownProject.test.test.LoginTest" />
+		</classes>
+	</test>
+	<test name="PIMAddEmployee">
+		<classes>
+			<class name="com.myownProject.test.test.PIMTest" />
+		</classes>
+	</test>
+	<test name="EditGeneralInfoTest">
+		<classes>
+			<class name="com.myownProject.test.test.EditOrgGeneralInfoTest" />
+		</classes>
+	</test>
+</suite>

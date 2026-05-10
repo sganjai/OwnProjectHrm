@@ -1,0 +1,48 @@
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="logDir">logs</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- Console -->
+        <Console name="Console">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %c - %msg%n"/>
+        </Console>
+
+        <!-- Smart Routing -->
+        <Routing name="SmartRouting">
+            <Routes pattern="$${ctx:fileName}">
+
+                <!-- Fallback -->
+                <Route key="default">
+                    <File name="defaultFile" fileName="logs/default.log">
+                        <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %c - %msg%n"/>
+                    </File>
+                </Route>
+
+                <!-- Dynamic File -->
+                <Route>
+                    <File name="File-${ctx:fileName}"
+                          fileName="${logDir}/${ctx:fileName}.log"
+                          append="false">
+
+                        <PatternLayout
+                                pattern="%d{HH:mm:ss} [%t] [%X{testId}] %-5level %c - %msg%n"/>
+                    </File>
+                </Route>
+
+            </Routes>
+        </Routing>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="SmartRouting"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

@@ -1,0 +1,106 @@
+18:30:23 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - browserLaunch called from before method
+18:30:23 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Initiating driver 'before method' base test
+18:30:23 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Initializing driver : DriverFactory
+18:30:23 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Setting Browser: Chrome : DriverFactory
+18:30:27 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - setDriver() has set the ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:27 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Driver initialized set to driver manager  : DriverFactory
+18:30:27 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Running in thread: 17
+18:30:27 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Returning driver  : DriverFactory
+18:30:27 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Page title is: OrangeHRM
+18:30:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Window maximized
+18:30:48 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:48 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.pages.BasePage - Driver fetched for: LoginPage
+18:30:49 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - NODE: Entering Credentials
+18:30:49 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to type 'Admin' into: By.name: username
+18:30:49 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:49 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Entered username
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to type 'admin123' into: By.name: password
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Entered password
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to click: By.xpath: //button[@type='submit']
+18:30:50 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:51 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Login Button is clicked
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s for visibility: By.xpath: //img[@alt='client brand banner']
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Login Success
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - NODE: Logging out
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.pages.BasePage - Driver fetched for: HomePage
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to click: By.xpath: //p[@class='oxd-userdropdown-name']
+18:30:55 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:56 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:57 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Profile Button is clicked
+18:30:57 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to click: By.xpath: //a[normalize-space()='Logout']
+18:30:57 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (f40559c7784b1d0539b60b474e0229ff) :DriverManager
+18:30:59 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Logged out successfully
+18:30:59 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Starting quit from 'after method' base test
+18:31:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - unload() has been called :DriverManager
+18:31:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Completed unload from 'after method' base test
+18:31:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - browserLaunch called from before method
+18:31:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Initiating driver 'before method' base test
+18:31:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Initializing driver : DriverFactory
+18:31:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Setting Browser: Chrome : DriverFactory
+18:31:08 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - setDriver() has set the ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:08 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Driver initialized set to driver manager  : DriverFactory
+18:31:08 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Running in thread: 17
+18:31:08 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Returning driver  : DriverFactory
+18:31:08 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Page title is: OrangeHRM
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Window maximized
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.pages.BasePage - Driver fetched for: LoginPage
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - NODE: Entering Credentials
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to type 'A1' into: By.name: username
+18:31:45 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Entered username
+18:31:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to type 'pas34' into: By.name: password
+18:31:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:47 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:48 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Entered password
+18:31:48 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to click: By.xpath: //button[@type='submit']
+18:31:48 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:52 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Login Button is clicked
+18:31:52 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (a15e0571eb9c16d28017aed6c3fa9b44) :DriverManager
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Invalid credentials
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Starting quit from 'after method' base test
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - unload() has been called :DriverManager
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Completed unload from 'after method' base test
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - browserLaunch called from before method
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Initiating driver 'before method' base test
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Initializing driver : DriverFactory
+18:31:53 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Setting Browser: Chrome : DriverFactory
+18:31:56 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - setDriver() has set the ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:31:56 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Driver initialized set to driver manager  : DriverFactory
+18:31:56 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Running in thread: 17
+18:31:56 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverFactory - Returning driver  : DriverFactory
+18:31:56 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Page title is: OrangeHRM
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Window maximized
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.pages.BasePage - Driver fetched for: LoginPage
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - NODE: Entering Credentials
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to type '' into: By.name: username
+18:32:04 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Entered username
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to type '' into: By.name: password
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Entered password
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to click: By.xpath: //button[@type='submit']
+18:32:05 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - Login Button is clicked
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to get text from: By.xpath: //input[@placeholder='Username']/following:: span[text()='Required'][1]
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.WaitUtil - Waiting 10s to get text from: By.xpath: //input[@placeholder='Password']/following:: span[text()='Required'][1]
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - getDriver() returned: ChromeDriver: chrome on windows (c5912c2724c82de932ac12d49b2574c3) :DriverManager
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.utilities.Reporter - User name is Required, Password is Required
+18:32:06 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Starting quit from 'after method' base test
+18:32:07 [TestNG-tests-1] [validateLogin-17] INFO  com.myown.ownProject.core.driver.DriverManager - unload() has been called :DriverManager
+18:32:07 [TestNG-tests-1] [validateLogin-17] INFO  com.myownProject.test.test.BaseTest - Completed unload from 'after method' base test

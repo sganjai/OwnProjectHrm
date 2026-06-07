@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
     private By passwordRequired = By.xpath("//input[@placeholder='Password']/following:: span[text()='Required'][1]");
     private By errorMessage = By.xpath("//p[text()='Invalid credentials']");
     private By dashBoardLogo = By.xpath("//img[@alt='client brand banner']");
-
+    private By hrmHeading = By.xpath("//*[contains(text(),'Streamline All Your HR Needs')]");    private By orangeHrmLink = By.xpath("//a[contains(text(),'OrangeHRM')]");
     // ===== Actions =====
     public void enterUsername(String user) { waitAndType(username,user); }
     public void enterPassword(String pass) {
@@ -132,5 +132,14 @@ public class LoginPage extends BasePage {
         return "NO_ERROR_MESSAGE";
     }
 
+
+    public void clickOrangeHrmLink() {
+        waitUntilDisplayed(username);
+        waitAndClick(orangeHrmLink);
+
+    }
+    public String getHrmHeadingText() {
+    return waitAndGetElement(hrmHeading).getText();
+}
 
 }

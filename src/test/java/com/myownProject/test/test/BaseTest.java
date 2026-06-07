@@ -1,25 +1,23 @@
 package com.myownProject.test.test;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.myown.ownProject.core.config.configReader;
 import com.myown.ownProject.core.driver.DriverFactory;
 import com.myown.ownProject.core.driver.DriverManager;
 import com.myown.ownProject.core.utilities.ExtentManager;
-import com.myown.ownProject.core.utilities.ExtentTestManager;
 import com.myown.ownProject.core.utilities.Reporter;
-import com.myown.ownProject.core.utilities.ScreenshotUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -38,13 +36,13 @@ public class BaseTest {
     @BeforeSuite
     public void setRunTime() {
         RUN_TIME = LocalDateTime.now().format(FORMATTER);
-        
+
     }
 
     //Below block of code used in beforemethod
-    private void browserLaunch(String zoomFactor) throws IOException {
+    private void browserLaunch() throws IOException {
         log.info("Initiating driver 'before method' base test");
-        DriverFactory.initializeDriver(zoomFactor);
+        DriverFactory.initializeDriver();
         driver = DriverManager.getDriver();   // important line, Getting driver which is initiated in above
 
 /*        //Setting implicit global wait
@@ -54,16 +52,27 @@ public class BaseTest {
 
         //Open website
         driver.get(configReader.getProperty("url"));
-        log.info("Page title is: " + driver.getTitle());
-        driver.manage().window().maximize();
-        log.info("Window maximized");
+        Reporter.info("Page title is: " + driver.getTitle());
+
+        // Only maximize in headed mode, not headless
+        boolean isHeadless = Boolean.parseBoolean(configReader.getProperty("headless"));
+
+        Dimension size = new Dimension(1920, 1080);
+
+        if (isHeadless) {
+            driver.manage().window().setSize(size);
+            log.info("Headless: set viewport 1920x1080");
+        } else {
+            driver.manage().window().maximize();
+            log.info("Maximized window");
+        }
 
     }
 
 
-    @Parameters({"zoomFactor"})
+
     @BeforeMethod
-    public void setup(@Optional("1") String zoomFactor,
+    public void setup(
                       ITestResult result,
                       ITestContext context) throws IOException {
 
@@ -99,7 +108,7 @@ public class BaseTest {
         ExtentTestManager.setTest(extentTest);*/
 
         log.info("browserLaunch called from before method");
-        browserLaunch(zoomFactor);
+        browserLaunch();
 
     }
 
@@ -148,11 +157,11 @@ public class BaseTest {
     @AfterSuite
     public void flushReport() throws Exception {
 
-    ExtentManager.getInstance().flush();
+        ExtentManager.getInstance().flush();
 
-    String path = System.getProperty("user.dir") +
-            "/reports/" + ExtentManager.getTime() + "/Report.html";
+        String path = System.getProperty("user.dir") +
+                "/reports/" + ExtentManager.getTime() + "/Report.html";
 
-    Desktop.getDesktop().browse(new File(path).toURI());
-}
+        Desktop.getDesktop().browse(new File(path).toURI());
+    }
 }

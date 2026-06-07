@@ -26,6 +26,9 @@ public class PIMTest extends BaseTest {
         loginPage = new LoginPage();
         Reporter.node("Entering Credentials");
         homePage = loginPage.login(configReader.getProperty("username"), configReader.getProperty("password"));
+        String s = driver.manage().window().getSize().toString();
+        Reporter.info("Dimension check= " + s);
+
         Assert.assertTrue(homePage.isDashBoardLogoDisplayed());
         Reporter.snap("DashBoard");
 

@@ -62,6 +62,7 @@ public class WaitUtil {
                 .isDisplayed();
     }
 
+
         /**
      * Waits for an element to be visible and returns the WebElement instance.
      * Use this for INTERACTION (e.g., to clear, then type).

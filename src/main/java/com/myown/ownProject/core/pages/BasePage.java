@@ -48,7 +48,10 @@ public class BasePage {
     protected boolean waitUntilDisplayed(By locator) {
         return WaitUtil.waitUntilDisplayed(locator, Timeout.DEFAULT);
     }
-
+     // wraps WaitUtil visibility
+    protected WebElement waitAndGetElement(By locator) {
+        return WaitUtil.waitAndGetElement(locator,Timeout.DEFAULT);
+    }
     // wraps WaitUtil visibility check with DEFAULT timeout — returns true if visible
     protected boolean waitUntilInvisible(By locator) {
         return WaitUtil.waitUntilInvisible(locator, Timeout.DEFAULT);

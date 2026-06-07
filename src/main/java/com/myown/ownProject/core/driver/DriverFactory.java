@@ -3,6 +3,7 @@ package com.myown.ownProject.core.driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,6 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -22,7 +24,7 @@ public class DriverFactory {
     private static final Logger log = LogManager.getLogger(DriverFactory.class);
 
     // This method creates the WebDriver and applies Chrome UI Zoom
-    public static WebDriver initializeDriver(String zoomFactor) throws IOException {
+    public static WebDriver initializeDriver() throws IOException {
         log.info("Initializing driver : DriverFactory");
         WebDriver driver;
         //Below setup is to load properties file
@@ -40,7 +42,9 @@ public class DriverFactory {
                 if (Boolean.parseBoolean(prop.getProperty("headless", "false"))) {
                     copt.addArguments("--headless=new");
                 }
-                copt.addArguments("--force-device-scale-factor=" + zoomFactor);
+                else{
+                    copt.addArguments("--force-device-scale-factor=1");
+                }
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(copt);
                 break;
@@ -51,25 +55,36 @@ public class DriverFactory {
                 //Below is codn to check head or headless via property file, if nothing default to headed mode
                 if (Boolean.parseBoolean(prop.getProperty("headless", "false"))) {
                     fopt.addArguments("--headless");
+                } else {
+                    FirefoxProfile profile = new FirefoxProfile();
+                    profile.setPreference("layout.css.devPixelsPerPx", "1.0");
+                    fopt.setProfile(profile);
                 }
-                fopt.addArguments("--force-device-scale-factor=" + zoomFactor);
+
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver(fopt);
                 break;
 
 
             case "edge":
+
                 EdgeOptions ed = new EdgeOptions();
+
                 ed.setAcceptInsecureCerts(true);
                 //Below is codn to check head or headless via property file, if nothing default to headed mode
                 if (Boolean.parseBoolean(prop.getProperty("headless", "false"))) {
                     ed.addArguments("--headless=new");
                 }
-                ed.addArguments("--force-device-scale-factor=" + zoomFactor);
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver(ed);
-                break;
+                else {
+                    ed.addArguments("--force-device-scale-factor=1");
+                }
 
+                WebDriverManager.edgedriver().setup();
+
+                driver = new EdgeDriver(ed);
+
+
+                break;
 
             default:
                 throw new IllegalArgumentException("Invalid browser" +  browser);

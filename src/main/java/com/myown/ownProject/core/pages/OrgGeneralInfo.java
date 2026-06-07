@@ -5,6 +5,8 @@ import com.myown.ownProject.core.utilities.Reporter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,9 +40,17 @@ public class OrgGeneralInfo extends BasePage{
     private By notes = By.xpath("//label[normalize-space()='Notes']/following::textarea[1]");
     private By required = By.xpath("//label[normalize-space()='//p[normalize-space()='* Required']");
 
+    //private By countryDropdown = By.xpath("//div[@class='oxd-select-text-input']");
+
+
     private By saveButton = By.xpath("//button[@type='submit' and normalize-space()='Save']");
     private By successPopup = By.xpath("//p[contains(@class,'toast-message') and contains(normalize-space(),'Successfully')]");
 
+    private By countryDropdown =
+        By.xpath("//div[@class='oxd-select-text-input']");
+
+private By indiaOption =
+        By.xpath("//span[text()='India']");
 
 
     public void editGenearalInfo() throws InterruptedException {
@@ -60,6 +70,12 @@ public class OrgGeneralInfo extends BasePage{
         String path = "src/test/resources/TestData/DataViaExcel.xlsx";
         Map<String, String> data = ExcelUtil.getData(path, "GeneralInfo");
         fillForm(data);
+//        // Select Country as India
+//        WebElement Dropdown = waitAndGetElement(countryDropdown);
+//        Select countrySelect = new Select(Dropdown);
+//        countrySelect.selectByVisibleText("India");
+        waitAndClick(countryDropdown);
+waitAndClick(indiaOption);
         Reporter.snap("Details of General Info Form filled");
         waitAndClick(saveButton);
 
